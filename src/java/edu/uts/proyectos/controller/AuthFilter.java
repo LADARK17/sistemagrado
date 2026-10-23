@@ -26,7 +26,8 @@ public class AuthFilter implements Filter {
         String path = uri.substring(ctx.length());
 
         // Recursos públicos: login, css, js, imagenes
-        if (path.startsWith("/assets/") || path.startsWith("/css/") || path.startsWith("/js/")
+        if (path.startsWith("/assets/") || path.startsWith("/css/") || path.startsWith("/js/") 
+                || path.startsWith("/img/") || path.startsWith("/images/")
                 || path.equals("/login.jsp") || path.equals("/login") || path.equals("/index.jsp") 
                 || path.equals("/inicio.jsp") || path.equals("/auth") || path.equals("/error.jsp")
                 || path.equals("/")) {

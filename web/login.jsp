@@ -762,7 +762,7 @@
                 <!-- Encabezado de Bienvenida -->
                 <div class="auth-header">
                     <div class="auth-mobile-logo" style="display: none; margin-bottom: 16px; text-align: center;">
-                        <img src="${pageContext.request.contextPath}/img/logo.png" alt="Logo UTS" style="height: 48px; width: auto; object-fit: contain;">
+                        <img src="${pageContext.request.contextPath}/img/logo.png" alt="Logo UTS" style="height: 48px; width: auto; object-fit: contain;" onerror="this.onerror=null; this.src='${pageContext.request.contextPath}/assets/img/logo.png';">
                     </div>
                     <h2>Iniciar Sesión</h2>
                     <p>Ingresa con tu correo institucional o número de documento</p>

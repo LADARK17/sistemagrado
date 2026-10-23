@@ -111,7 +111,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-warning" onclick="abrirModalEvaluador(${p.id}, ${p.fase})">
+                                    <button type="button" class="btn btn-sm btn-warning" onclick="abrirModalEvaluador('${p.id}', '${p.fase}')">
                                         <span>Calificar Fase</span>
                                     </button>
                                 </td>

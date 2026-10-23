@@ -126,7 +126,7 @@
                                     </c:choose>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-warning" onclick="abrirModalDirector(${p.id}, ${p.fase})">
+                                    <button type="button" class="btn btn-sm btn-warning" onclick="abrirModalDirector('${p.id}', '${p.fase}')">
                                         <span>Evaluar Fase</span>
                                     </button>
                                 </td>

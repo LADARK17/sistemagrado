@@ -1,4 +1,4 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../WEB-INF/jspf/guardComite.jspf" %>
 <%@ include file="../WEB-INF/jspf/conexion.jspf" %>
@@ -133,7 +133,7 @@
                                 </td>
                                 <td>
                                     <!-- Botón modal para emitir decisión -->
-                                    <button type="button" class="btn btn-sm btn-warning" onclick="abrirModalDecision(${p.id}, ${p.fase}, '${p.tipoNivel}')">
+                                    <button type="button" class="btn btn-sm btn-warning" onclick="abrirModalDecision('${p.id}', '${p.fase}', '${p.tipoNivel}')">
                                         <span>Dictaminar</span>
                                     </button>
                                 </td>
