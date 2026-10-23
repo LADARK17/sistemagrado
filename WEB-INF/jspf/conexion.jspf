@@ -1,0 +1,6 @@
+<%--
+    SIGRADO UTS - Configuración y acceso a datos común
+--%>
+<%@ page import="edu.uts.proyectos.config.MockDataStore" %>
+<%@ page import="edu.uts.proyectos.config.ConexionDB" %>
+<%@ page import="edu.uts.proyectos.model.*" %>

@@ -1,0 +1,1691 @@
+/* ==========================================================================
+   SIGRADO UTS - HOJA DE ESTILOS PRINCIPAL
+   Modo Claro Institucional UTS (Verde Institucional #006837 & Blanco #ffffff)
+   Alternancia de Fondos: Blanco y Verde Institucional
+   ========================================================================== */
+
+@import url('../assets/css/uts-estilos.css');
+
+/* ==========================================================================
+   VARIABLES DE COLOR INSTITUCIONAL UTS - MODO CLARO
+   ========================================================================== */
+:root {
+    --uts-green-primary: #006837;
+    --uts-green-dark: #004d26;
+    --uts-green-deep: #021f10;
+    --uts-green-light: #059669;
+    --uts-green-mint: #f0fdf4;
+    --uts-green-mint-border: #bbf7d0;
+    --uts-green-glow: rgba(0, 104, 55, 0.25);
+    
+    --uts-gold: #f59e0b;
+    --uts-gold-hover: #d97706;
+    --uts-gold-bg: #fffbeb;
+    --uts-gold-border: #fde68a;
+
+    --uts-white: #ffffff;
+    --uts-slate-50: #f8fafc;
+    --uts-slate-100: #f1f5f9;
+    --uts-slate-200: #e2e8f0;
+    --uts-slate-600: #475569;
+    --uts-slate-700: #334155;
+    --uts-slate-800: #1e293b;
+    --uts-slate-900: #0f172a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: #006837;
+    color: #ffffff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ==========================================================================
+   LANDING PAGE BASE (MODO CLARO)
+   ========================================================================== */
+.landing-page {
+    background-color: var(--uts-white);
+    color: var(--uts-slate-700);
+    min-height: 100vh;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.landing-container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   1. NAVEGACIÓN PÚBLICA (FONDO BLANCO)
+   ========================================================================== */
+.landing-nav {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--uts-slate-200);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 14px 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.landing-brand img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--uts-green-primary);
+    line-height: 1.1;
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.brand-sub {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--uts-slate-600);
+}
+
+.landing-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-anchor {
+    color: var(--uts-slate-700);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.2s ease;
+}
+
+.nav-anchor::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--uts-green-primary);
+    transition: width 0.25s ease;
+}
+
+.nav-anchor:hover {
+    color: var(--uts-green-primary);
+}
+
+.nav-anchor:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   2. HERO PRINCIPAL (FONDO VERDE INSTITUCIONAL)
+   ========================================================================== */
+.landing-hero {
+    background: linear-gradient(135deg, #004d26 0%, #006837 55%, #087f46 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 85px 0 75px;
+    color: #ffffff;
+    box-shadow: inset 0 -12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Patrón sutil decorativo en el Hero */
+.landing-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(0, 0, 0, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.landing-hero .landing-container {
+    position: relative;
+    z-index: 2;
+}
+
+.badge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #006837;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.landing-hero .badge-tag {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pulse-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #fbbf24;
+    box-shadow: 0 0 10px #fbbf24;
+    animation: heroPulse 2s infinite;
+}
+
+@keyframes heroPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(251, 191, 36, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
+}
+
+.landing-h1 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    font-size: 3.3rem;
+    font-weight: 800;
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    max-width: 960px;
+    margin: 0 auto 22px;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.landing-lead {
+    font-size: 1.15rem;
+    color: #e6f7ef;
+    max-width: 820px;
+    margin: 0 auto 38px;
+    line-height: 1.68;
+    font-weight: 400;
+}
+
+.landing-cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Botones especiales del Hero sobre Fondo Verde */
+.landing-hero .btn-primary {
+    background: #ffffff;
+    color: var(--uts-green-dark);
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 13px 28px;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.landing-hero .btn-primary:hover {
+    background: #f8fafc;
+    color: var(--uts-green-primary);
+    transform: translateY(-2.5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.landing-hero .btn-primary svg {
+    stroke: var(--uts-green-dark);
+    transition: transform 0.2s ease;
+}
+
+.landing-hero .btn-primary:hover svg {
+    stroke: var(--uts-green-primary);
+    transform: translateX(3px);
+}
+
+.landing-hero .btn-secondary {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.75);
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 13px 26px;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.landing-hero .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: translateY(-2.5px);
+}
+
+/* Barra de Atributos Institucionales en el Hero */
+.hero-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.hero-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #f0fdf4;
+}
+
+.hero-highlight-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   ESTILOS COMUNES DE SECCIÓN (SECCIONES GENERALES)
+   ========================================================================== */
+.landing-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.section-header {
+    margin-bottom: 48px;
+}
+
+.section-pill {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+}
+
+/* ==========================================================================
+   3. SECCIÓN: CICLO DE 6 FASES (FONDO BLANCO)
+   ========================================================================== */
+#fases.landing-section {
+    background-color: var(--uts-white);
+}
+
+#fases .section-pill {
+    background: var(--uts-green-mint);
+    border: 1px solid var(--uts-green-mint-border);
+    color: var(--uts-green-primary);
+}
+
+#fases h2 {
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: var(--uts-slate-900);
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+#fases .section-header p {
+    font-size: 1.05rem;
+    color: var(--uts-slate-600);
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.fases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 26px;
+}
+
+.fase-card {
+    background: var(--uts-white);
+    border: 1px solid var(--uts-slate-200);
+    border-top: 4px solid var(--uts-green-primary);
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.fase-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 36px -4px rgba(0, 104, 55, 0.14), 0 6px 14px -2px rgba(0, 0, 0, 0.04);
+    border-color: var(--uts-green-mint-border);
+    border-top-color: var(--uts-green-light);
+}
+
+.fase-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #e2e8f0;
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    transition: color 0.25s ease;
+}
+
+.fase-card:hover .fase-number {
+    color: #bbf7d0;
+}
+
+.fase-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 8px;
+    background: var(--uts-green-mint);
+    border: 1px solid var(--uts-green-mint-border);
+    color: var(--uts-green-primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    width: fit-content;
+}
+
+.fase-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--uts-slate-900);
+}
+
+.fase-card p {
+    font-size: 0.94rem;
+    color: var(--uts-slate-600);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.fase-meta {
+    border-top: 1px solid var(--uts-slate-100);
+    padding-top: 14px;
+    font-size: 0.86rem;
+    color: var(--uts-slate-700);
+    background: var(--uts-slate-50);
+    margin: 0 -30px -30px;
+    padding: 12px 30px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.fase-meta strong {
+    color: var(--uts-green-dark);
+}
+
+/* ==========================================================================
+   4. SECCIÓN: CALENDARIO ACADÉMICO (FONDO VERDE INSTITUCIONAL CON TARJETA BLANCA)
+   ========================================================================== */
+#calendario.landing-section {
+    background: linear-gradient(135deg, #004d26 0%, #005a30 50%, #006837 100%);
+    color: #ffffff;
+    box-shadow: inset 0 6px 18px rgba(0, 0, 0, 0.08), inset 0 -6px 18px rgba(0, 0, 0, 0.08);
+}
+
+#calendario .section-pill {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+}
+
+#calendario h2 {
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+#calendario .section-header p {
+    font-size: 1.05rem;
+    color: #e6f7ef;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.calendario-table-card {
+    background: var(--uts-white);
+    border-radius: 18px;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.28), 0 6px 18px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.uts-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.uts-table thead {
+    background: #004824;
+}
+
+.uts-table th {
+    padding: 18px 24px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    border: none;
+}
+
+.uts-table tbody tr {
+    border-bottom: 1px solid var(--uts-slate-100);
+    transition: background-color 0.2s ease;
+}
+
+.uts-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.uts-table tbody tr:hover {
+    background-color: #f0fdf4;
+}
+
+.uts-table td {
+    padding: 18px 24px;
+    font-size: 0.94rem;
+    color: var(--uts-slate-800);
+    vertical-align: middle;
+}
+
+.uts-table td strong {
+    color: var(--uts-slate-900);
+    font-weight: 600;
+}
+
+/* Status Chips Modernos */
+.status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border-radius: 9999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.chip-neutral {
+    background: var(--uts-slate-100);
+    color: var(--uts-slate-600);
+    border: 1px solid var(--uts-slate-200);
+}
+
+.chip-approved {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.chip-approved::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #10b981;
+}
+
+.chip-pending {
+    background: var(--uts-gold-bg);
+    color: #92400e;
+    border: 1px solid var(--uts-gold-border);
+}
+
+.chip-pending::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #f59e0b;
+}
+
+/* ==========================================================================
+   5. SECCIÓN: FORMATOS OFICIALES (FONDO BLANCO)
+   ========================================================================== */
+#formatos.landing-section {
+    background-color: var(--uts-white);
+}
+
+#formatos .section-pill {
+    background: var(--uts-green-mint);
+    border: 1px solid var(--uts-green-mint-border);
+    color: var(--uts-green-primary);
+}
+
+#formatos h2 {
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: var(--uts-slate-900);
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+#formatos .section-header p {
+    font-size: 1.05rem;
+    color: var(--uts-slate-600);
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.formatos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.formato-item {
+    background: var(--uts-white);
+    border: 1px solid var(--uts-slate-200);
+    border-radius: 16px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 18px -2px rgba(0, 0, 0, 0.04);
+    transition: all 0.26s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.formato-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px -4px rgba(0, 104, 55, 0.12);
+    border-color: var(--uts-green-primary);
+}
+
+.formato-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--uts-green-primary);
+    background: var(--uts-green-mint);
+    border: 1px solid var(--uts-green-mint-border);
+    padding: 5px 12px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    width: fit-content;
+}
+
+.formato-body h4,
+.formato-item h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--uts-slate-900) !important;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.formato-body p,
+.formato-item p {
+    font-size: 0.88rem;
+    color: var(--uts-slate-600);
+    line-height: 1.55;
+    margin-bottom: 14px;
+}
+
+.btn-outline-primary {
+    border: 1.5px solid var(--uts-green-primary);
+    color: var(--uts-green-primary);
+    background: transparent;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+    background: var(--uts-green-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 104, 55, 0.25);
+    transform: translateY(-1.5px);
+}
+
+.btn-outline-primary svg {
+    stroke: currentColor;
+    transition: transform 0.2s ease;
+}
+
+.btn-outline-primary:hover svg {
+    transform: translate(2px, -2px);
+}
+
+/* ==========================================================================
+   6. BANNER CTA PRE-FOOTER (FONDO VERDE INSTITUCIONAL)
+   ========================================================================== */
+.landing-cta-banner {
+    background: linear-gradient(135deg, #004d26 0%, #006837 55%, #057a44 100%);
+    color: #ffffff;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-cta-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 90% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.cta-banner-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-banner-content h3 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.cta-banner-content p {
+    font-size: 1.05rem;
+    color: #e6f7ef;
+    max-width: 650px;
+    line-height: 1.5;
+}
+
+.cta-banner-btn {
+    background: #ffffff;
+    color: var(--uts-green-dark);
+    font-weight: 700;
+    padding: 14px 28px;
+    font-size: 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+.cta-banner-btn:hover {
+    background: #f8fafc;
+    color: var(--uts-green-primary);
+    transform: translateY(-2.5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+/* ==========================================================================
+   7. FOOTER PÚBLICO INSTITUCIONAL (FONDO VERDE OSCURO PROFUNDO UTS)
+   ========================================================================== */
+.landing-footer {
+    background: var(--uts-green-deep);
+    color: #cbd5e1;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 38px 0;
+    font-size: 0.92rem;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-info strong {
+    color: #ffffff;
+    font-size: 1.05rem;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.footer-info span {
+    color: #94a3b8;
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.footer-info small {
+    color: #64748b;
+    font-size: 0.82rem;
+}
+
+/* ==========================================================================
+   SELECTOR MULTI-ROL (Mantener compatibilidad)
+   ========================================================================== */
+.choose-role-body {
+    background: radial-gradient(circle at 50% 10%, #062013 0%, #04130b 90%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.choose-role-card {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 680px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+}
+
+.roles-selection-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 26px;
+}
+
+.role-card-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 18px 22px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+}
+
+.role-card-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(34, 197, 94, 0.5);
+    transform: translateX(4px);
+}
+
+.role-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.role-details h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.role-details p {
+    font-size: 0.84rem;
+    color: #94a3b8;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.role-enter-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #22c55e;
+}
+
+.badge-role-administrador { background: rgba(99, 102, 241, 0.18); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.35); }
+.badge-role-comite { background: rgba(16, 185, 129, 0.18); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35); }
+.badge-role-docente { background: rgba(14, 165, 233, 0.18); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.35); }
+.badge-role-estudiante { background: rgba(245, 158, 11, 0.18); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.35); }
+
+/* ==========================================================================
+   SISTEMA INTERNO / DASHBOARD (APP LAYOUT, SIDEBAR, TOPBAR, TABLAS Y VISTAS)
+   ========================================================================== */
+
+body.sigrado-app {
+    background-color: #f8fafc;
+    color: #334155;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #f8fafc;
+}
+
+/* ==========================================================================
+   SIDEBAR PRINCIPAL (APP-SIDEBAR)
+   ========================================================================== */
+.app-sidebar,
+.uts-sidebar {
+    width: 270px;
+    min-width: 270px;
+    background: linear-gradient(180deg, #004d26 0%, #00361a 60%, #012210 100%);
+    color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-brand {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.brand-link img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+}
+
+.brand-text .brand-title {
+    display: block;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #ffffff !important;
+    letter-spacing: -0.02em;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.1;
+}
+
+.brand-text .brand-sub {
+    display: block;
+    font-size: 0.72rem;
+    color: #a7f3d0 !important;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+.nav-section-title {
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: #86efac;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 14px 12px 6px;
+    margin-top: 6px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.nav-item,
+.nav-item-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    color: #d1fae5;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.nav-item:hover,
+.nav-item-link:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+.nav-item.active,
+.nav-item-link.active {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    font-weight: 700;
+    border-left: 4px solid #fbbf24;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.nav-item svg,
+.nav-item-link svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    stroke: currentColor;
+}
+
+/* ==========================================================================
+   CONTENIDO PRINCIPAL Y TOPBAR
+   ========================================================================== */
+.app-main-content,
+.main-wrapper,
+.uts-main-content {
+    margin-left: 270px;
+    width: calc(100% - 270px);
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #f8fafc;
+    box-sizing: border-box;
+}
+
+.app-topbar,
+.uts-topbar {
+    height: 72px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 6px;
+    cursor: pointer;
+    color: #475569;
+}
+
+.topbar-periodo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #006837;
+}
+
+.periodo-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #10b981;
+    box-shadow: 0 0 8px #10b981;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-profile-menu .user-avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #006837 0%, #059669 100%);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 104, 55, 0.25);
+}
+
+.user-info-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: #0f172a;
+}
+
+.user-role-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    width: fit-content;
+    margin-top: 2px;
+}
+
+.topbar-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.topbar-btn:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: #cbd5e1;
+}
+
+.topbar-btn.btn-logout {
+    color: #dc2626;
+    background: #fef2f2;
+    border-color: #fee2e2;
+}
+
+.topbar-btn.btn-logout:hover {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #dc2626;
+}
+
+/* ==========================================================================
+   CUERPO DE PÁGINA (CONTENT-BODY, TARJETAS, TABLAS)
+   ========================================================================== */
+.content-body {
+    flex: 1;
+    padding: 32px 36px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.page-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.page-title-row h2 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+    font-family: 'Outfit', sans-serif;
+}
+
+.page-title-row p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.page-title-row .badge-tag {
+    margin-bottom: 0;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #006837;
+    font-size: 0.74rem;
+    padding: 3px 10px;
+}
+
+.uts-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+.uts-card .uts-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background: #ffffff;
+}
+
+.uts-card .uts-table thead {
+    background: #004d26;
+}
+
+.uts-card .uts-table th {
+    background: #004d26;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 14px 18px;
+    border: none;
+}
+
+.uts-card .uts-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.92rem;
+    color: #1e293b;
+    vertical-align: middle;
+}
+
+.uts-card .uts-table tbody tr:hover {
+    background-color: #f0fdf4;
+}
+
+.uts-card .uts-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.uts-card .uts-table td a {
+    color: #006837;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.uts-card .uts-table td a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   FOOTER DEL PANEL
+   ========================================================================== */
+.app-footer {
+    margin-left: 270px;
+    width: calc(100% - 270px);
+    box-sizing: border-box;
+    padding: 18px 36px;
+    border-top: 1px solid #e2e8f0;
+    background: #ffffff;
+    color: #64748b;
+    font-size: 0.82rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-badge {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    border: 1px solid #e2e8f0;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN PARA LA APLICACIÓN
+   ========================================================================== */
+@media (max-width: 900px) {
+    .landing-h1 { font-size: 2.5rem; }
+    .hero-highlights { gap: 16px; flex-direction: column; align-items: center; }
+    .cta-banner-flex { flex-direction: column; text-align: center; }
+    .cta-banner-btn { width: 100%; justify-content: center; }
+    
+    .app-sidebar,
+    .uts-sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .app-sidebar.show,
+    .uts-sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .app-main-content,
+    .main-wrapper,
+    .uts-main-content,
+    .app-footer {
+        margin-left: 0;
+    }
+    
+    .mobile-toggle {
+        display: block;
+    }
+    
+    .content-body {
+        padding: 20px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-h1 { font-size: 2.1rem; }
+    .landing-actions .nav-anchor { display: none; }
+    .choose-role-card { padding: 24px; }
+    .footer-flex { flex-direction: column; text-align: center; gap: 16px; }
+}
+
+/* ==========================================================================
+   COMPONENTES DE FORMULARIOS INSTITUCIONALES (UTS-FORM & CONTROLS)
+   ========================================================================== */
+.uts-form {
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1e293b;
+    letter-spacing: -0.1px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #006837;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 104, 55, 0.15);
+    background-color: #ffffff;
+}
+
+textarea.form-control {
+    min-height: 80px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+select.form-control {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 36px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.input-disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+    background-color: #f1f5f9 !important;
+    color: #64748b !important;
+    border: 1.5px solid #e2e8f0 !important;
+    cursor: not-allowed !important;
+    user-select: none;
+}
+
+.form-section-title {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #006837;
+    border-left: 4px solid #006837;
+    padding-left: 10px;
+    margin-bottom: 14px;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+}
+
+/* ==========================================================================
+   BOTONES INSTITUCIONALES (UTS BUTTONS)
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.25;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #006837 0%, #004d26 100%);
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0, 104, 55, 0.25);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #005a30 0%, #003e1e 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 104, 55, 0.35);
+}
+
+.btn-secondary {
+    background: #f1f5f9;
+    color: #334155 !important;
+    border: 1px solid #cbd5e1;
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+    color: #0f172a !important;
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background: #059669;
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);
+}
+
+.btn-success:hover {
+    background: #047857;
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background: #dc2626;
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.2);
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
+}
+
+.btn-warning {
+    background: #d97706;
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(217, 119, 6, 0.2);
+}
+
+.btn-warning:hover {
+    background: #b45309;
+    transform: translateY(-1px);
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    border-radius: 6px;
+}
+
+/* ==========================================================================
+   ALERTAS INSTITUCIONALES (UTS ALERTS)
+   ========================================================================== */
+.alert {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.alert-success {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.alert-warning {
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+.alert-danger {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.alert-info {
+    background: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+
+/* ==========================================================================
+   MAPA DE FASES / STEPPER HORIZONTAL (RF-GEN-10)
+   ========================================================================== */
+.stepper-horizontal {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin: 14px 0;
+}
+
+@media (max-width: 1024px) {
+    .stepper-horizontal {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .stepper-horizontal {
+        grid-template-columns: 1fr;
+    }
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.step-item.step-completed {
+    border-color: #86efac;
+    background: #f0fdf4;
+}
+
+.step-item.step-current {
+    border-color: #006837;
+    background: #ecfdf5;
+    box-shadow: 0 0 0 3px rgba(0, 104, 55, 0.15), 0 4px 12px rgba(0, 104, 55, 0.08);
+    transform: translateY(-2px);
+}
+
+.step-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.92rem;
+    background: #e2e8f0;
+    color: #64748b;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.step-item.step-completed .step-dot {
+    background: #10b981;
+    color: #ffffff;
+}
+
+.step-item.step-current .step-dot {
+    background: #006837;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 104, 55, 0.4);
+}
+
+.step-text {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.step-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.step-desc {
+    font-size: 0.74rem;
+    color: #64748b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.step-item.step-current .step-title {
+    color: #006837;
+}
+
+.step-item.step-completed .step-title {
+    color: #047857;
+}
+
+

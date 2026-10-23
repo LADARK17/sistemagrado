@@ -1,0 +1,11 @@
+<%-- 
+    SIGRADO UTS - Guard de Rol Estudiante (RNF-02)
+--%>
+<%@ include file="guard.jspf" %>
+<%
+    String rolActual = (String) session.getAttribute("rol_activo");
+    if (rolActual == null || !rolActual.equalsIgnoreCase("estudiante")) {
+        response.sendRedirect(request.getContextPath() + "/error.jsp?code=403&msg=" + java.net.URLEncoder.encode("Acceso exclusivo para Estudiantes matriculados", "UTF-8"));
+        return;
+    }
+%>

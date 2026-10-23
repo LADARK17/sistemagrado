@@ -1,0 +1,11 @@
+<%-- 
+    SIGRADO UTS - Guard de Rol Comité de Grado (RNF-02)
+--%>
+<%@ include file="guard.jspf" %>
+<%
+    String rolActual = (String) session.getAttribute("rol_activo");
+    if (rolActual == null || !rolActual.equalsIgnoreCase("comite")) {
+        response.sendRedirect(request.getContextPath() + "/error.jsp?code=403&msg=" + java.net.URLEncoder.encode("Acceso exclusivo para integrantes del Comité de Trabajos de Grado", "UTF-8"));
+        return;
+    }
+%>

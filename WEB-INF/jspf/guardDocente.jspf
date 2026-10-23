@@ -1,0 +1,11 @@
+<%-- 
+    SIGRADO UTS - Guard de Rol Docente (Director / Evaluador / Codirector)
+--%>
+<%@ include file="guard.jspf" %>
+<%
+    String rolActual = (String) session.getAttribute("rol_activo");
+    if (rolActual == null || !rolActual.equalsIgnoreCase("docente")) {
+        response.sendRedirect(request.getContextPath() + "/error.jsp?code=403&msg=" + java.net.URLEncoder.encode("Acceso exclusivo para el cuerpo Docente", "UTF-8"));
+        return;
+    }
+%>
