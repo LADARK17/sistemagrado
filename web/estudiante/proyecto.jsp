@@ -640,7 +640,7 @@ window.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    var autoAbrir = ${abrirFormulario ? "true" : "false"};
+    var autoAbrir = "${abrirFormulario}" === "true";
     if (autoAbrir) {
         var box = document.getElementById('boxFormRadicacion');
         if (box) {
